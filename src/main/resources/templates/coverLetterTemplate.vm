@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            line-height: 1.4;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #2bccb1;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: -20px;
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .title {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            /*background-color: #2bccb1;*/
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .address-block {
+            margin-bottom: 30px;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        .line {
+            flex-grow: 1;
+            height: 1px;
+            background-color: #ccc;
+        }
+
+        .diamond {
+            width: 20px;
+            height: 20px;
+            background-color: #2a7d6b;
+            transform: rotate(45deg);
+            margin: 0 15px;
+        }
+
+        .letter-content {
+            margin-bottom: 30px;
+        }
+
+        .letter-content p {
+            margin-bottom: 20px;
+        }
+
+        .signature {
+            margin-top: 20px;
+        }
+
+        .footer {
+            text-align: right;
+            margin-top: 50px;
+        }
+
+        .footer img {
+            height: 30px;
+        }
+
+        td {
+            padding-bottom: 1px;
+        }
+
+        table {
+            empty-cells: show;
+            width: 100%;
+            font-size: 12px;
+        }
+
+        .td-lengnth {
+            font-size: 10px;
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 4px;
+            padding-right: 4px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            word-wrap: break-word;
+        }
+
+        .head-td {
+            font-size: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 4px;
+            padding-right: 4px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Header with name and contact info -->
+    <div class="header" style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="flex: 1;">
+            <h1 class="name">$firstName $lastName</h1>
+            <div class="title">Senior Software Developer</div>
+        </div>
+
+        <div style="flex: 1;">
+            <!-- Contact information aligned right -->
+            <table style="width: 100%; border: none;">
+                <tr>
+                    <td style="text-align: right;">rsharma0374@gmail.com</td>
+                    <td style="width: 20px;">
+                        <div class="icon">
+                            <img src="data:image/png;base64,$emailIcon" width="15" height="15" align="bottom"
+                                 style="margin-left: 0px;"/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">9085289995 / 9529756787</td>
+                    <td style="width: 20px;">
+                        <div class="icon">
+                            <img src="data:image/png;base64,$phoneIcon" width="15" height="15" align="bottom"
+                                 style="margin-left: 0px;"/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Tinsukia, Assam</td>
+                    <td style="width: 20px;">
+                        <div class="icon">
+                            <img src="data:image/png;base64,$locationIcon" width="15" height="15" align="bottom"
+                                 style="margin-left: 0px;"/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><a href="www.linkedin.com/in/rahul0374" target="_blank">linkedin.com/in/rahul0374</a>
+                    </td>
+                    <td style="width: 20px;">
+                        <div class="icon">
+                            <img src="data:image/png;base64,$linkedinIcon" width="15" height="15" align="bottom"
+                                 style="margin-left: 0px;"/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;"><a href="portfolio.guardianservices.in/rahulsharma" target="_blank">portfolio.guardianservices.in/rahulsharma</a></td>
+                    <td style="width: 20px;">
+                        <div class="icon">
+                            <img src="data:image/png;base64,$portfolioIcon" width="15" height="15" align="bottom"
+                                 style="margin-left: 0px;"/>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Recipient address -->
+    <div class="address-block">
+        <p style="margin-bottom: 2px;">To:</p>
+        #if($hireManager)
+            <p style="margin-top: 0; margin-bottom: 2px;">$hireManager</p>
+        #else
+            <p style="margin-top: 0; margin-bottom: 2px;">HR Manager</p>
+        #end
+        <p style="margin-top: 0; margin-bottom: 2px;">$companyName</p>
+    </div>
+
+    <!-- Decorative divider -->
+    <div class="divider">
+        <div class="line"></div>
+        <div class="diamond"></div>
+        <div class="line"></div>
+    </div>
+
+    <!-- Letter content -->
+    <div class="letter-content">
+        <p>Dear
+        #if($hireManager)
+            $hireManager,<br>
+        #else
+        HR Manager,
+        #end
+        </p>
+
+        <p>With a strong background in Java development and experience of 3+ years in designing scalable solutions, I am excited to
+            apply for the Java Developer role at $companyName. My expertise in microservices architecture, cloud
+            technologies, and backend development makes me a strong candidate for this opportunity.</p>
+
+        <p>During my tenure at Lentra, I played a key role in developing and optimizing the Loan Origination System,
+            enhancing API performance, and upgrading projects from Java 8 to Java 17. My experience in building secure
+            and efficient software solutions, such as a password management system with bcrypt and AES-256 encryption, demonstrates
+            my ability to create impactful applications. Furthermore, my contributions to the HDFC Easy EMI App
+            significantly improved user engagement and revenue growth.</p>
+        <p>$companyName aligns perfectly with my skills in Java, Spring Boot, Kafka, Hibernate, SQL, NoSql AWS, React.js, OCI etc. I am
+            confident in my ability to contribute meaningfully to your team’s objectives by developing high-performance,
+            scalable solutions.</p>
+
+        <p>I would welcome the opportunity to discuss how my experience and technical proficiency align with the needs
+            of $companyName. Please find my resume attached for your review. I look forward to your response and
+            appreciate your consideration.</p>
+
+        <p>Thank you for your consideration.</p>
+    </div>
+
+    <!-- Decorative divider -->
+    <div class="divider">
+        <div class="line"></div>
+        <div class="diamond"></div>
+        <div class="line"></div>
+    </div>
+
+    <!-- Signature -->
+    <div class="signature">
+        <p>Best regards,<br>
+            $firstName $lastName</p>
+    </div>
+</div>
+
+</body>
+</html>
