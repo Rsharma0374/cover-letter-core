@@ -195,11 +195,10 @@
     <div class="address-block">
         <p style="margin-bottom: 2px;">To:</p>
         #if($hireManager)
-            <p style="margin-top: 0; margin-bottom: 2px;">$hireManager</p>
+            <p style="margin-top: 0; margin-bottom: 2px;">$hireManager, $companyName</p>
         #else
-            <p style="margin-top: 0; margin-bottom: 2px;">HR Manager</p>
+            <p style="margin-top: 0; margin-bottom: 2px;">HR Manager, $companyName</p>
         #end
-        <p style="margin-top: 0; margin-bottom: 2px;">$companyName</p>
     </div>
 
     <!-- Decorative divider -->
